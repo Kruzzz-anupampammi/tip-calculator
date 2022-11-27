@@ -1,0 +1,195 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+* {
+  font-family: "Space Mono", monospace;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: hsl(185, 41%, 84%);
+  gap: 4rem;
+}
+
+.logo {
+  text-align: center;
+  margin: 30px;
+}
+
+.card {
+  background-color: white;
+  width: 850px;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.card_container {
+  display: flex;
+  gap: 32px;
+}
+
+.input_section,
+.output_section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.output_section {
+  background-color: hsl(183, 100%, 15%);
+  border-radius: 15px;
+  padding: 20px;
+}
+
+.bill_section,
+.tip_section,
+.people_section {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.input_section {
+  gap: 15px;
+}
+
+label {
+  color: hsl(183, 100%, 15%);
+  font-size: 15px;
+}
+
+.bill_input,
+.people_input {
+  position: relative;
+}
+
+.bill_input input,
+.people_input input {
+  width: 100%;
+  text-align: right;
+  padding: 7px;
+  border: none;
+  font-size: 18px;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(183, 100%, 15%);
+  outline-color: hsl(172, 67%, 45%);
+}
+
+.bill_input img,
+.people_input img {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+
+.tip_btns {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+}
+
+.tip_btns button {
+  width: 90px;
+  color: white;
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.tip_btns button:hover {
+  background-color: hsl(172, 67%, 45%);
+  color: hsl(183, 100%, 15%);
+}
+
+.selected {
+  background-color: hsl(172, 67%, 45%) !important;
+  color: hsl(183, 100%, 15%) !important;
+}
+
+.tip_btns input {
+  width: 90px;
+  padding: 8px;
+  text-align: right;
+  background-color: hsl(189, 41%, 97%);
+  border: none;
+  font-size: 14px;
+  border-radius: 8px;
+  outline-color: hsl(172, 67%, 45%);
+}
+
+.output_section {
+  gap: 25px;
+}
+
+.tip_amount,
+.total_amount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.tip_amount h2,
+.total_amount h2 {
+  color: hsl(172, 67%, 45%);
+  font-size: 30px;
+}
+
+.tip_amount span,
+.total_amount span {
+  font-size: 12px;
+  color: hsl(184, 14%, 56%);
+}
+
+.tip_amount p,
+.total_amount p {
+  color: white;
+}
+
+.reset_button {
+  margin-top: auto;
+  padding: 10px;
+  border: none;
+  background-color: hsl(172, 67%, 45%);
+  text-transform: uppercase;
+  border-radius: 10px;
+  cursor: pointer;
+  color: hsl(183, 100%, 15%);
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 50%;
+}
+
+.reset_button:hover {
+  opacity: 100%;
+}
+
+@media screen and (max-width: 750px) {
+  body {
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 32px;
+    gap: 0;
+  }
+  .input_section,
+  .output_section {
+    width: 100%;
+  }
+  .card {
+    width: 100%;
+    margin-top: auto;
+  }
+  .card_container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
